@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -70,7 +68,7 @@ public class PlayerManager : MonoBehaviour
 
 
 }
-        //Moving the camera with the player's movement smoothly
+        //Moving the camera along with the player smoothly
     private void LateUpdate()
     {
         var cameraNewPos = mainCam.transform.position;
@@ -85,8 +83,8 @@ public class PlayerManager : MonoBehaviour
         {
             gameObject.SetActive(false);
             MenuManager.MenuManagerInstance.GameState = false;
-
         }
+
     }
 
     //Making the player jump on path's end

@@ -6,7 +6,8 @@ public class MenuManager : MonoBehaviour
 {
     public static MenuManager MenuManagerInstance;
     public bool GameState;
-    public GameObject menuElement;
+    public GameObject[] menuElement = new GameObject[2];
+
     void Start()
     {
         GameState = false;
@@ -18,8 +19,11 @@ public class MenuManager : MonoBehaviour
         
     }
 
+    //The game is not active by default
     public void GameStart(){
         GameState = true;
-        menuElement.SetActive(false);
+        menuElement[0].SetActive(false);
     }
+
+
 }
